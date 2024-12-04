@@ -56,7 +56,7 @@ spec:
       initContainers:
         - name: download-mysql-connector
           image: busybox:latest
-          command: ['sh', '-c', "wget https://repo1.maven.org/maven2/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar -O /tmp/mysql-connector-j-8.0.33.jar && mkdir -p /mnt/wso2am/lib && mv /tmp/mysql-connector-j-8.0.33.jar /mnt/wso2am/lib/"]
+          command: ['sh', '-c', "wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.22/mysql-connector-java-8.0.22.jar -O /tmp/mysql-connector-java-8.0.22.jar && mkdir -p /mnt/wso2am/lib && mv /tmp/mysql-connector-java-8.0.22.jar /mnt/wso2am/lib/"]
           
           volumeMounts:
             - name: wso2am-lib-volume
