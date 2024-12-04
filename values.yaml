@@ -451,7 +451,7 @@ wso2:
       # APIM keystore configurations
       security:
         # -- Kubernetes secret name containing the keystores and truststore
-        jksSecretName: "wso2Secret" # TODO
+        jksSecretName: "jks-secret" # TODO
         keystores:
           primary:
             # -- Primary keystore enabled
