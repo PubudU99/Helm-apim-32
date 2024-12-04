@@ -272,7 +272,7 @@ wso2:
           driver: "com.mysql.cj.jdbc.Driver"
         apimDB: # TODO
           # -- AM database URL
-          url: "bnym.mysql.database.azure.com"
+          url: "jdbc:mysql://bnym.mysql.database.azure.com:3306/apimDB?useSSL=false"
           # -- AM database username
           username: "bnymDB"
           # -- AM database password
@@ -286,7 +286,7 @@ wso2:
             indexingFrequencyInSeconds: 10
         sharedDB: # TODO
           # -- Shared database URL
-          url: "bnym.mysql.database.azure.com"
+          url: "jdbc:mysql://bnym.mysql.database.azure.com:3306/sharedDB?useSSL=false"
           # -- Shared database username
           username: "bnymDB"
           # -- Shared database password
