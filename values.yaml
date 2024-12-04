@@ -466,7 +466,7 @@ wso2:
             keyPassword: "wso2carbon"
           tls:
             # -- Secondary keystore enabled
-            enabled: true
+            enabled: false
             # -- Secondary keystore name
             name: "wso2carbon1.jks"
             # -- Secondary keystore alias
@@ -477,7 +477,7 @@ wso2:
             keyPassword: "wso2carbon"
           internal:
             # -- Internal keystore enabled
-            enabled: true
+            enabled: false
             # -- Internal keystore name
             name: "wso2carbon2.jks"
             # -- Internal keystore alias
