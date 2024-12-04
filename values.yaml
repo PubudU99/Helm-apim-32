@@ -590,7 +590,7 @@ wso2:
     # -- APIM server port offset
     portOffset: 0
     # -- Enable secure vault
-    secureVaultEnabled: true
+    secureVaultEnabled: false
 
   deployment:
     am: # TODO
