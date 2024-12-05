@@ -146,18 +146,6 @@ spec:
               mountPath: /mnt/secrets-store
               readOnly: true
             {{ end }}
-            - name: apim-jks-volume
-              mountPath: /home/wso2carbon/wso2-artifact-volume/repository/resources/security/{{ .Values.wso2.apim.configurations.security.keystores.internal.name }}
-              subPath: {{ .Values.wso2.apim.configurations.security.keystores.internal.name }}
-            - name: apim-jks-volume
-              mountPath: /home/wso2carbon/wso2-artifact-volume/repository/resources/security/{{ .Values.wso2.apim.configurations.security.keystores.primary.name}}
-              subPath: {{ .Values.wso2.apim.configurations.security.keystores.primary.name }}
-            - name: apim-jks-volume
-              mountPath: /home/wso2carbon/wso2-artifact-volume/repository/resources/security/{{ .Values.wso2.apim.configurations.security.keystores.tls.name}}
-              subPath: {{ .Values.wso2.apim.configurations.security.keystores.tls.name }}
-            - name: apim-jks-volume
-              mountPath: /home/wso2carbon/wso2-artifact-volume/repository/resources/security/{{ .Values.wso2.apim.configurations.security.truststore.name}}
-              subPath: {{ .Values.wso2.apim.configurations.security.truststore.name }}
             - name: apim-secret-conf
               mountPath: /home/wso2carbon/wso2-config-volume/repository/conf/security/secret-conf.properties
               subPath: secret-conf.properties
@@ -203,9 +191,6 @@ spec:
               secretProviderClass: {{ .Values.gcp.secretsManager.secretProviderClass }}
             {{- end }}
         {{ end }}
-        - name: apim-jks-volume
-          secret:
-            secretName: {{ .Values.wso2.apim.configurations.security.jksSecretName }}
         - name: apim-secret-conf
           configMap:
             name: {{ template "am-all-in-one.fullname" . }}-am-secret-conf
