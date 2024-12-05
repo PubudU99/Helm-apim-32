@@ -488,7 +488,7 @@ wso2:
             keyPassword: "wso2carbon"
         truststore:
           # -- Truststore name
-          name: "client-trustore.jks"
+          name: "client-truststore.jks"
           # -- Truststore password
           password: "wso2carbon"
   
