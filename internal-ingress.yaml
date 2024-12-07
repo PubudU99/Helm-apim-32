@@ -8,13 +8,23 @@ controller:
     type: LoadBalancer
     loadBalancerIP: 10.0.3.4
     annotations:
-      service.beta.kubernetes.io/azure-load-balancer-internal:
-        "true"
-      service.beta.kubernetes.io/azure-load-balancer-internal-subnet: 
-        snet-LB-subnet
-      service.beta.kubernetes.io/azure-load-balancer-resource-group: 
-        rg-aks-nodepool-rg
+      service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+      service.beta.kubernetes.io/azure-load-balancer-internal-subnet: snet-LB-subnet
+      service.beta.kubernetes.io/azure-load-balancer-resource-group: rg-aks-nodepool-rg
     ports:
-      - port: 80
-      - port: 443  
+      - name: http
+        port: 80
+        targetPort: 80
+      - name: https
+        port: 443
+        targetPort: 443
+
+    # Optional NodePort configuration if needed
+    nodePorts:
+      http: 30090
+      https: 30091
+
+    # Optional to control session affinity (usually for LoadBalancers)
+    sessionAffinity: None
+
 
