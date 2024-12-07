@@ -1,4 +1,4 @@
-apiVersion: approuting.kubernetes.azure.com/v1
+apiVersion: approuting.kubernetes.azure.com/v1alpha1
 kind: NginxIngressController
 metadata:
   name: nginx-internal
